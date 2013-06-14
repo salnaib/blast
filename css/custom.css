@@ -1,0 +1,60 @@
+/*
+* This file contais CSS just for the app
+*/
+
+
+/* ======================================================= */
+/* Override Section  (Replaces what is in other CSS files)
+/* ======================================================= */
+
+
+/* #Header
+================================================== */
+
+
+
+
+
+/* ======================================================= */
+/* New Section (New CSS goes here)
+/* ======================================================= */
+
+p.bigger { font-size: 1.3em;  }
+
+/* #Header
+================================================== */
+#footer ul li a, #footer ul li a:visited {font-size: 1.5em; font-weight: 50; color: #bbb; text-decoration: none; outline: 0;-webkit-transition: color 0.5s ease-in-out; -moz-transition: color 0.5s ease-in-out; -o-transition: color 0.5s ease-in-out; -transition: color 0.5s ease-in-out;}
+#footer ul li a:hover, #footer ul li a:focus { color: white; }
+#footer #footer-logo img {margin: auto;}
+#footer ul { padding: 2px 5px 25px 5px;}
+#footer ul li { text-align: center;}
+#footer { text-align: center;}
+
+#footer_bottom ul li a, #footer_bottom ul li a:visited {font-size: 1em; }
+#footer ul { padding: auto; line-height:50px; vertical-align: baseline;}
+
+@media only screen and (min-width: 767px) { /* All Mobile Sizes (devices and browser) */
+#footer ul li { display: inline; padding: 0px 15px 0px 15px;} 
+}
+
+
+/* #Bio Filtering
+================================================== */
+
+#filtersBios {
+  margin-bottom: 10px;
+}
+           
+#filtersBios a:hover {
+	color: #fff;
+	background: #888;
+
+}           
+                 
+#filtersBios ul li {
+	display: inline;
+	float: left;
+	padding: 0 10px 0 0;
+	margin: 0 5px 0 0;
+	background: url(../images/filter_divider.png) no-repeat  100% 50%;
+}

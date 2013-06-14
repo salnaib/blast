@@ -98,21 +98,21 @@
 					<li>
 						<img src="images/img_slider_01.png" alt="" />
 						<div class="slider-caption-2">
-							<h3>Find the right events.</h3>
+							<h3>Send a targeted message.</h3>
 						</div>
 					</li>
 
 					<li>
 						<img src="images/img_slider_02.png" alt="" />
 						<div class="slider-caption-2">
-							<h3>Browse LinkedIn profiles of<br>attendees in one view.</h3>
+							<h3>To ONLY your relevant contacts.</h3>
 						</div>
 					</li>
 					
 					<li>
 						<img src="images/img_slider_03.png" alt="" />
 						<div class="slider-caption-2">
-							<h3>Easily message attendees<br> before & during the event.</h3>
+							<h3>And allow them to forward it to their relevant contacts.</h3>
 						</div>
 					</li>
 					

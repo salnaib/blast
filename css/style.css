@@ -1099,6 +1099,7 @@ ul.social li.rss a{background:url(../images/social_icons/rss.png) no-repeat;}
 		#blog_widget_container {display: none;}
 		.portfolio-item-meta {margin: 0 0 25px 0}
 		#backtotop a {display: none;}
+		.button {font-size:11px;}
 	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

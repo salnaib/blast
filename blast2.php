@@ -1,23 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>CrowdLinker - Back-End Developer</title>
-<link type="text/css" rel="stylesheet" href="css/fcbklistselection.css" />
-<link type="text/css" rel="stylesheet" href="css/styles.css?id=12522" />
-<link type="text/css" rel="stylesheet" href="css/custom3.css" />
-<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+<link rel="stylesheet" type="text/css"  href="css/fcbklistselection.css">
+<link rel="stylesheet" type="text/css"  href="css/blast.css">
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/keywords.js?id=ffff"></script>
 <script type="text/javascript" src="js/fcbklistselection.js?id=dgggg"></script>
 
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
 	api_key: w1otxvf35or4
+	//  scope:r_network,w_messages,rw_nus rw_groups,r_contactinfo,r_emailaddress,r_fullprofile r_basicprofile
 	scope:r_network,w_messages
 	authorize: false
-	credentials_cookie: true
+credentials_cookie: true
 	onLoad: onLinkedInLoad
 </script>
-<script src="https://www.linkedin.com/uas/js/userspace?v=0.0.2000-RC1.28251-1405&amp;apiKey=w1otxvf35or4&amp;%2F%2F%20%20scope=r_network%2Cw_messages%2Crw_nus%20rw_groups%2Cr_contactinfo%2Cr_emailaddress%2Cr_fullprofile%20r_basicprofile&amp;scope=r_network%2Cw_messages&amp;authorize=false&amp;credentialsCookie=true&amp;onLoad=onLinkedInLoad&amp;"></script>
 <!-- NOTE: be sure to set onLoad: onLinkedInLoad -->
 
 <script type="text/javascript">
@@ -341,41 +340,35 @@ function setConnections(connections) {
 
 </head>
 <body>
-<?php include("header.html"); ?>
 
-<!-- Page Subtitle -->
-	<div id="subtitle">
-		<!-- 960 Container -->
-		<div class="container">
-  			<div class="sixteen columns">
-				<h3>Blast trial: CrowdLinker - Back-End Developer</h3>
+	<?php include("header.html"); ?>
+		<!-- Page Subtitle -->
+		<div id="subtitle">
+			<!-- 960 Container -->
+			<div class="container">
+				<div class="sixteen columns">
+					<h3>CrowdLinker - Back-End Developer</h3>
+				</div>
 			</div>
-		</div>
-		<!-- End 960 Container -->
-	</div><!-- End Page Subtitle -->
-
-	
-	
-	<!-- 960 Container -->
+			<!-- End 960 Container -->
+		</div><!-- End Page Subtitle -->
 	<div class="container">
+
 		<div id="errMsg"></div>
 		<div id="contents">
-		<p class="top_message">Let your contacts know about our opening for a Back-End Web Developer by messaging them on LinkedIn. 
-      <br>Earn a <b>$250</b> referral fee. Use this web-page to easily message the right contacts.
-    </p>
 		<span class="welcome"></span>
-		<script type="in/login"></script>
+		<script type="IN/Login"></script>
 		<div class="linkein_txt">
-				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
-        We will automatically pre-select your contacts that are most appropriate to send this message to.
+				<h4>Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
+        We will automatically pre-select your contacts that are most appropriate to send this message to.</h4>
         
 		</div>
 		
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
-			<a id="selectall" class="button gray" >Select All</a> 
-			<a id="unselectall" class="button gray" >Unselect All</a>		
-			<a id="selectrec" class="button gray" >Select Recommended</a>
+			<a id="selectall" class="button gray">Select All</a> 
+			<a id="unselectall" class="button gray">Unselect All</a>		
+			<a id="selectrec" class="button gray">Select Recommended</a>
 		</div>
 
 		<br>	
@@ -388,13 +381,12 @@ function setConnections(connections) {
 		<div id="sendMessageForm"></div>
 		<span class="sending hidden"><img src="images/ajax_loader_gray_48.gif?id=n100"></span>
 		<br>
-		<a class='sendmsg msgcenter hidden button blue'>Send</a>
+		<a class="blue css-button">Send Message</a>
 		</div>
 		<div id="messages">
 				<div class="status hidden"></div>
 				<div class="sent hidden"></div>	
 		</div>
-	</div>
 	
 <script type="text/javascript">
 
@@ -409,6 +401,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 })();
 
 </script>
+
+</div>
 
 <?php include("footer.html"); ?>
 

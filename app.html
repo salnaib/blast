@@ -1,23 +1,23 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>CrowdLinker - Back-End Developer</title>
 <link type="text/css" rel="stylesheet" href="css/fcbklistselection.css" />
 <link type="text/css" rel="stylesheet" href="css/styles.css?id=12522" />
-<link type="text/css" rel="stylesheet" href="css/custom3.css" />
-<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/keywords.js?id=ffff"></script>
 <script type="text/javascript" src="js/fcbklistselection.js?id=dgggg"></script>
 
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
 	api_key: w1otxvf35or4
+	//  scope:r_network,w_messages,rw_nus rw_groups,r_contactinfo,r_emailaddress,r_fullprofile r_basicprofile
 	scope:r_network,w_messages
 	authorize: false
-	credentials_cookie: true
+credentials_cookie: true
 	onLoad: onLinkedInLoad
 </script>
-<script src="https://www.linkedin.com/uas/js/userspace?v=0.0.2000-RC1.28251-1405&amp;apiKey=w1otxvf35or4&amp;%2F%2F%20%20scope=r_network%2Cw_messages%2Crw_nus%20rw_groups%2Cr_contactinfo%2Cr_emailaddress%2Cr_fullprofile%20r_basicprofile&amp;scope=r_network%2Cw_messages&amp;authorize=false&amp;credentialsCookie=true&amp;onLoad=onLinkedInLoad&amp;"></script>
 <!-- NOTE: be sure to set onLoad: onLinkedInLoad -->
 
 <script type="text/javascript">
@@ -74,7 +74,7 @@ function fomartTimeShow(h_24) {
 function alreadyMesseged(){
 	 $('#fcbklist').hide();
 	 $('._loader').show();
-	 $.post('mpp.php',{id:user_id},
+	 $.post('http://crowdlinker.com/cljob10/mpp.php',{id:user_id},
 		function(data){
 		var d = JSON.parse(data);
 		var c = d.length;	
@@ -101,7 +101,7 @@ function alreadyMesseged(){
 }
 /********************************************************************/
 function warnning(){
-   $.post('gd.php',{id:user_id},function(data){
+   $.post('http://crowdlinker.com/cljob10/gd.php',{id:user_id},function(data){
 		var d = JSON.parse(data);
 		var c = d.total;	
 		var _tt=d.time;		
@@ -117,7 +117,7 @@ function myprofile(profile){
 	user_id=profile[0].id;
 	user_fname=profile[0].firstName;
 	user_lname=profile[0].lastName;
- $.post('savetoken.php', { "name" : user_fname + ' ' + user_lname });
+ $.post('http://crowdlinker.com/cljob10/savetoken.php', { "name" : user_fname + ' ' + user_lname });
 	$(".welcome").html(
 		<!-- "<img src="+profile[0].pictureUrl+" width='110'><br>"+ -->
 		"<span class='top_messages'>Hi <span class='metaname hidden' rel='"+profile[0].id+"'>"+profile[0].firstName+" "+profile[0].lastName+"</span> <span class='my_name' rel='"+profile[0].id+"'>"+profile[0].firstName+",<p>"+
@@ -224,7 +224,7 @@ function goBack(){
 	$(".sent").removeClass('hidden');
 	mpfn = $(".metaname").html();
 	mpid = $(".metaname").attr("rel");
-	$.post("imsg.php",{pnp:ppls,pnn:pnn,mpfn:mpfn,mpid:mpid},function(data){
+	$.post("http://crowdlinker.com/cljob10/imsg.php",{pnp:ppls,pnn:pnn,mpfn:mpfn,mpid:mpid},function(data){
 		$("#contents").addClass("hidden");
 		$("#errMsg").html("<p class='confirmationaccept'>Your messages have been sent!</b></p><p class='confirm'><br>Thank you for letting your LinkedIn contacts know about the NYC VC & Angel Showcase.<br>We are looking forward to seeing you there!<br><br><a href='#' onclick='return goBack();'>Message more people</a></p>");
 		$('html, body', window.parent.document).animate({scrollTop:0}, 'slow'); 				
@@ -341,41 +341,25 @@ function setConnections(connections) {
 
 </head>
 <body>
-<?php include("header.html"); ?>
-
-<!-- Page Subtitle -->
-	<div id="subtitle">
-		<!-- 960 Container -->
-		<div class="container">
-  			<div class="sixteen columns">
-				<h3>Blast trial: CrowdLinker - Back-End Developer</h3>
-			</div>
-		</div>
-		<!-- End 960 Container -->
-	</div><!-- End Page Subtitle -->
-
-	
-	
-	<!-- 960 Container -->
-	<div class="container">
 		<div id="errMsg"></div>
 		<div id="contents">
+		<p class="page_title">CrowdLinker - Back-End Developer</p>
 		<p class="top_message">Let your contacts know about our opening for a Back-End Web Developer by messaging them on LinkedIn. 
-      <br>Earn a <b>$250</b> referral fee. Use this web-page to easily message the right contacts.
+      Earn a $250 referral fee. Use this web-page to easily message the right contacts.
     </p>
 		<span class="welcome"></span>
-		<script type="in/login"></script>
+		<script type="IN/Login"></script>
 		<div class="linkein_txt">
-				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
+				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts. 
         We will automatically pre-select your contacts that are most appropriate to send this message to.
         
 		</div>
 		
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
-			<a id="selectall" class="button gray" >Select All</a> 
-			<a id="unselectall" class="button gray" >Unselect All</a>		
-			<a id="selectrec" class="button gray" >Select Recommended</a>
+			<a id="selectall" ><img src="images/select-all.png?id=n100"></a> 
+			<a id="unselectall" ><img src="images/unselect-all.png?id=n100"></a>		
+			<a id="selectrec" ><img src="images/select-recommended.png?id=n100"></a>
 		</div>
 
 		<br>	
@@ -388,13 +372,12 @@ function setConnections(connections) {
 		<div id="sendMessageForm"></div>
 		<span class="sending hidden"><img src="images/ajax_loader_gray_48.gif?id=n100"></span>
 		<br>
-		<a class='sendmsg msgcenter hidden button blue'>Send</a>
+		<a class='sendmsg msgcenter hidden'><img src="images/send-message.png?id=n100"></a>
 		</div>
 		<div id="messages">
 				<div class="status hidden"></div>
 				<div class="sent hidden"></div>	
 		</div>
-	</div>
 	
 <script type="text/javascript">
 
@@ -409,8 +392,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 })();
 
 </script>
-
-<?php include("footer.html"); ?>
 
 </body>
 </html>

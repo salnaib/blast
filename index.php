@@ -255,7 +255,7 @@
     <div id = 'inlineBottomSignupArea' style = 'text-align: center;'>
 		<span class="welcome"></span>
 		<script type="IN/Login"></script>
-      <a href = "./blast.php" class = "blue css-button">Get Started</a>
+      <a href = "./blast.php" class = "blue css-button">Try it now!</a>
     </div>   
    </div>		
     

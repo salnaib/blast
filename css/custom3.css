@@ -46,15 +46,54 @@ box-shadow:none;
       -webkit-animation:HL 0.5s infinite; /* Safari and Chrome */
    }
 
-    @keyframes HL{
-       from {color:yellow;}
-       to {color:blue;}
-    }
+@keyframes HL{
+   from {color:yellow;}
+   to {color:blue;}
+}
 
-    @-webkit-keyframes HL /* Safari and Chrome */{
-       from {color:yellow;}
-       to {color:blue;}
-    }
+@-webkit-keyframes HL /* Safari and Chrome */{
+   from {color:yellow;}
+   to {color:blue;}
+}
+	
+.a-btn{
+    position: relative;
+    transition: all 0.3s linear;
+}
+.a-btn span{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.3s linear;
+}
+.a-btn span:nth-child(1), 
+.a-btn span:nth-child(3){
+	position: absolute;
+    top: 5px;
+    left: 2px;
+    opacity: 0;
+	font-size: 18px;
+}
+.a-btn span:nth-child(1){
+    opacity: 0.2;
+}
+
+.a-btn:hover span:nth-child(3){
+    opacity: 1; 
+}
+.a-btn:hover span:nth-child(2){
+	transform: scale(0);
+    opacity: 0; 
+}
+.a-btn:hover span:nth-child(1){
+    animation: rotate 1s linear; 
+}
+
+@-webkit-keyframes rotate{
+    0% { transform: scale(1) rotate(0);}
+    50% { transform: scale(0.5) rotate(180deg);}
+    100% { transform: scale(1) rotate(360deg);}
+}	
 	
 .info_message {
 }

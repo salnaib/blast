@@ -18,6 +18,7 @@
   ================================================== -->
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css"  href="css/style.css">
+	<link rel="stylesheet" type="text/css"  href="css/custom3.css">
 	
 	<!-- JS
   ================================================== -->
@@ -82,7 +83,7 @@
 			</div>
 		</div>
 		
-		<!-- Slider -->
+		<!-- Slider 
 		<div class="sixteen columns">
 			<div class="flexslider home">
 				<ul class="slides">
@@ -111,7 +112,7 @@
 				 </ul>
 			</div>
 		</div>
-		
+		-->
 
 		  <div class="sixteen columns"><h2 class="related-title"><span>How It Works</span></h2></div>			
 			
@@ -245,9 +246,11 @@
 
    <div class="four columns" >
     <div id = 'inlineBottomSignupArea' style = 'text-align: center;'>
-		<span class="welcome"></span>
-		<script type="IN/Login"></script>
-      <a href = "./blast.php" class = "blue css-button">Try it now!</a>
+		<a href="./blast.php" class="blue css-button a-btn">
+			<span></span>
+			<span>Try it now!</span>
+			<span>Earn a $250 referral fee!</span>
+		</a>
     </div>   
    </div>		
     

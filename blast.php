@@ -3,7 +3,6 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>CrowdLinker - Back-End Developer</title>
 <link type="text/css" rel="stylesheet" href="css/fcbklistselection.css" />
-<link type="text/css" rel="stylesheet" href="css/styles.css?id=12522" />
 <link type="text/css" rel="stylesheet" href="css/custom3.css" />
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
@@ -372,7 +371,7 @@ function setConnections(connections) {
       <br><font class="HL">Earn a $250 referral fee.</font> Use this web-page to easily message the right contacts.
     </p>
 		<span class="welcome"></span>
-		<script type="in/login"></script>
+		<script type="IN/Login"></script>
 		<div class="linkein_txt">
 				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
         We will automatically pre-select your contacts that are most appropriate to send this message to.
@@ -382,7 +381,7 @@ function setConnections(connections) {
    </div>		
 
 
-   <div class="seven columns" >
+   <div class="seven columns form_details" >
     <div id = 'inlineBottomSignupArea' style = 'text-align: center;'>
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
@@ -401,7 +400,7 @@ function setConnections(connections) {
 		<div id="sendMessageForm"></div>
 		<span class="sending hidden"><img src="images/ajax_loader_gray_48.gif?id=n100"></span>
 		<br>
-		<a class='sendmsg msgcenter hidden button blue'>Send</a>
+		<p class="unhide hidden"><a class='sendmsg msgcenter button blue'>Send</a></p>
 		</div>
 		<div id="messages">
 				<div class="status hidden"></div>

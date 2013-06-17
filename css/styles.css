@@ -1,0 +1,162 @@
+.or{
+	position:absolute;
+	margin-left:250px;
+}
+
+.fbbtn{
+	position:absolute;
+	margin-left:310px;
+}
+.twbtn:hover,
+.fbbtn:hover{
+	cursor:pointer;
+}
+
+
+.twbtn{
+	position:absolute;
+	margin-left:310px;
+	margin-top:50px;
+}
+
+.linkein_txt{
+	width:325px;
+	border:1px solid #ccc;
+	margin:0 auto;
+	padding: 10px;
+	margin-top:30px;
+}
+
+.fb_tw_txt{
+	float:left;
+	margin-left:13px;
+	width:230px;
+	margin-top:70px;
+	border:1px solid #ccc;	
+	height:100px;
+	padding:10px;
+}
+
+.gray{
+	color:gray;
+}
+
+.sgray{
+	color:gray;
+	font-size:9px;
+	padding-left:13px;
+}
+
+
+.sent,
+.status{
+	width:560px;
+	font-size:130%;
+}
+
+.err{
+	color:red;
+}
+
+.top_message{
+	width:560px;
+	margin-bottom:50px;
+}
+
+
+.confirm{
+	text-align:center;
+	width:560px;
+}
+
+
+
+.confirmationaccept {
+background:#e5f7e3 url(../images/check.gif) no-repeat;
+background-position:7px 7px;
+border:1px solid #c5e1c8;
+font-weight:700;
+color:#005e20;
+width:220px;
+padding:8px 8px 8px 28px;
+margin-left:140px;
+margin-top:180px;
+}
+
+.confirmationerror {
+background:#ffebeb url(../images/x.gif) no-repeat;
+background-position:7px 7px;
+border:1px solid #f5c1c2;
+font-weight:100;
+color:#9e0b0f;
+width:300px;
+padding:8px 8px 8px 28px;
+text-align;center;
+margin-left:140px;
+margin-top:180px;
+}
+
+.confirmationwarning {
+background:#fffeeb url(../images/warning.gif) no-repeat;
+background-position:7px 7px;
+border:1px solid #e6e5d8;
+font-weight:700;
+color:#555;
+width:300px;
+padding:8px 8px 8px 28px;
+}
+
+.confirmationquestion {
+background:#e8f8fe url(../images/question.gif) no-repeat;
+background-position:7px 7px;
+border:1px solid #cfdfe5;
+font-weight:700;
+color:#004a80;
+width:300px;
+padding:8px 8px 8px 28px;
+}
+
+.page_title{
+	border-bottom: 2px dotted lightgray;
+    color: #9D0A0E !important;
+    font-family: "Oswald","Arial","Lucida Grande","sans-serif" !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+	font-size:24px;
+	line-height:36px;
+    font-style: normal;
+    font-variant: normal;
+	width:550px;
+	text-align:center;
+}   
+
+input[type=text], textarea {
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+textarea {
+	width:560px;
+	height:110px;
+}
+
+.search{
+	position:absolute;
+	margin-top:-4px;
+}
+
+.sending{
+	margin-left:240px;
+}
+
+

@@ -348,7 +348,7 @@ function setConnections(connections) {
 		<!-- 960 Container -->
 		<div class="container">
   			<div class="sixteen columns">
-				<h3>Blast trial: CrowdLinker - Back-End Developer</h3>
+				<h3>Blast trial</h3>
 			</div>
 		</div>
 		<!-- End 960 Container -->
@@ -360,8 +360,16 @@ function setConnections(connections) {
 	<div class="container">
 		<div id="errMsg"></div>
 		<div id="contents">
+  			<div class="blast_trial_header">
+				<h4>CrowdLinker - Back-End Developer</h4>
+			</div>
+			
+			<!-- 960 Container -->
+	<div class="container" >	
+		
+   <div class="seven columns info_message">
 		<p class="top_message">Let your contacts know about our opening for a Back-End Web Developer by messaging them on LinkedIn. 
-      <br>Earn a <b>$250</b> referral fee. Use this web-page to easily message the right contacts.
+      <br><font class="HL">Earn a $250 referral fee.</font> Use this web-page to easily message the right contacts.
     </p>
 		<span class="welcome"></span>
 		<script type="in/login"></script>
@@ -370,7 +378,12 @@ function setConnections(connections) {
         We will automatically pre-select your contacts that are most appropriate to send this message to.
         
 		</div>
-		
+      <br>
+   </div>		
+
+
+   <div class="seven columns" >
+    <div id = 'inlineBottomSignupArea' style = 'text-align: center;'>
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
 			<a id="selectall" class="button gray" >Select All</a> 
@@ -394,6 +407,11 @@ function setConnections(connections) {
 				<div class="status hidden"></div>
 				<div class="sent hidden"></div>	
 		</div>
+    </div>   
+   </div>		
+    
+	</div>
+		
 	</div>
 	
 <script type="text/javascript">

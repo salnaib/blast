@@ -18,18 +18,10 @@
   ================================================== -->
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css"  href="css/style.css">
-
-	
-	
-	<!-- Web Fonts
-  ================================================== -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
 	<!-- JS
   ================================================== -->
       
-	<script type='text/javascript' src="js/jquery-1.7.2.min.js"></script>
-	<script type='text/javascript' src="js/custom.js"></script>
 	<script type='text/javascript' src="js/shortcodes.js"></script>
 	<script type='text/javascript' src="js/custom2.js"></script> <!-- Added by MN July 2012 -->	
 	

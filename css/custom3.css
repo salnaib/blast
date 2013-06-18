@@ -1,6 +1,7 @@
 .sendmsg {
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
+	float: right;
 }
 
 .top_message, .linkein_txt {
@@ -9,10 +10,6 @@
 	font-size: 17px;
 	padding: 10px;
 	
-}
-
-.standouttext {
-	display:inline;
 }
 
 .button {
@@ -96,6 +93,22 @@ box-shadow:none;
 }	
 	
 .info_message {
+	text-align:center;
+	width: 35%;
+	float: left;
+	margin: 5px;
+}
+
+.form_details {
+			width: 60%;
+			float: right;
+			margin-left: 20px;
+			text-align:left;
+}
+		
+#filterSearchBox {
+	float: left;
+	width:90%;
 }
 
 #selectall, #unselectall,
@@ -110,6 +123,9 @@ box-shadow:none;
 }
 .names_item{
 	font-size:10px;
+}
+.hidden{
+	display:none ;
 }
 
 .unhide{
@@ -141,6 +157,10 @@ label{
 	font-weight:bold;
 	display:block;
 	padding: 0 10px 10px 0;
+}
+
+.search_label{
+	float:left;
 }
 
 .gray{
@@ -230,7 +250,7 @@ input[type=text]:focus, textarea:focus {
 }
 
 textarea {
-	width:560px;
+	width:100%;
 	height:110px;
 }
 
@@ -243,14 +263,40 @@ textarea {
 	margin-left:240px;
 }
 
+#subject, #filterSearchBox {
+	width:100%;
+}
+
+#sendmsg {
+	width: 100%;
+}
+
+.search{
+	position:absolute;
+	margin-top:-4px;
+}
+
+#connectionsdata .loader img{
+	margin-left:240px;
+}
+
 	/* Desktop 960 */
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: 960px) {		
 	} 
 	
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px) {
+	
+		.info_message, .form_details {
+			text-align:left;
+			width: 90%;
+			float: none;
+			margin: 5px;
+		}
+
 		.top_message, .linkein_txt {
 			font-size: 11px;
+			text-align:left;
 		}
 		
 		#subtitle .container  .sixteen h3 {
@@ -261,10 +307,11 @@ textarea {
 			font-size: 16px;
 		}
 		
-		.form_details {
-			display: block;
+		#selectall, #unselectall,
+		#selectrec {
+			font-size:8px;
 		}
-
+				
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */

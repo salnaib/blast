@@ -119,8 +119,8 @@ function myprofile(profile){
  $.post('savetoken.php', { "name" : user_fname + ' ' + user_lname });
 	$(".welcome").html(
 		<!-- "<img src="+profile[0].pictureUrl+" width='110'><br>"+ -->
-		"<span class='top_messages'>Hi <span class='metaname hidden' rel='"+profile[0].id+"'>"+profile[0].firstName+" "+profile[0].lastName+"</span> <span class='my_name' rel='"+profile[0].id+"'>"+profile[0].firstName+",<p>"+
-		"Below, we have already pre-selected some of your <span class='sctr'></span> contacts we believe might be interested in our job opening or probably know someone who is. Please feel free to pick whoever you would like to message by clicking on their profiles. Please keep in mind that you can only message up to a maximum of 100 people within 24 hours.</p><p>CrowdLinker is looking for a Back-End web developer proficient in PHP, SQL, Javascript and jQuery. We are offering a $250 referral fee to whomever refers a successful candidate. (Refer your LinkedIn contact by selecting them below or email us at <a href='mailto:contact@crowdlinker.com'>contact@crowdlinker.com</a>.) Find the full job posting <a href='http://ca.indeed.com/cmp/CrowdLinker-Inc./jobs/Lead-Back-End-Developer-ec737ad3c20c1f3d' target='_blank'>here</a>.</p></span><span class='warn'></span>"
+		"<p class='top_message'>Hi <span class='metaname hidden' rel='"+profile[0].id+"'>"+profile[0].firstName+" "+profile[0].lastName+"</span> <span class='my_name' rel='"+profile[0].id+"'>"+profile[0].firstName+",</p><p class='top_message'>"+
+		"Below, we have already pre-selected some of your <span class='sctr'></span> contacts we believe might be interested in our job opening or probably know someone who is. Please feel free to pick whoever you would like to message by clicking on their profiles. Please keep in mind that you can only message up to a maximum of 100 people within 24 hours.</p><p class='top_message'>CrowdLinker is looking for a Back-End web developer proficient in PHP, SQL, Javascript and jQuery. We are offering a $250 referral fee to whomever refers a successful candidate. (Refer your LinkedIn contact by selecting them below or email us at <a href='mailto:contact@crowdlinker.com'>contact@crowdlinker.com</a>.) Find the full job posting <a href='http://ca.indeed.com/cmp/CrowdLinker-Inc./jobs/Lead-Back-End-Developer-ec737ad3c20c1f3d' target='_blank'>here</a>.</p></span><span class='warn'></p>"
 	);
 	warnning();
 }
@@ -324,7 +324,7 @@ function setConnections(connections) {
 	var div = document.getElementById("sendMessageForm");
 	//div.innerHTML +='<p class="unhide">Unhide '+"<span class='cr'>0</span>"+' connections I\'ve already messaged.</p>';
 	div.innerHTML += '<br><form action="javascript:SendMessage("");">' +
-		  '<div class="msgcenter"><label>Subject</label><input id="subject" size="50" value="Job Opening: Web Developer, $250 referral (CrowdLinker Inc)" type="text"><br><br>' +
+		  '<div class="msgcenter"><label>Subject</label><input id="subject" value="Job Opening: Web Developer, $250 referral (CrowdLinker Inc)" type="text"><br><br>' +
 		  '<label>Message</label><textarea  id="message">'+
 												'CrowdLinker Inc. is looking for a Back-End web developer (PHP, SQL, Javascript and jQuery.) They are offering a $250 referral fee to anyone who refers a successful candidate. If you or anyone you know is interested, visit http://crowdlinker.com/cljob10 for details. You can also use the page to automatically refer your LinkedIn contacts that might be a good fit. (I used it to send you this message.)</textarea></form></div>';											
 
@@ -366,23 +366,22 @@ function setConnections(connections) {
 			<!-- 960 Container -->
 	<div class="container" >	
 		
-   <div class="seven columns info_message">
+   <div class="info_message">
 		<p class="top_message">Let your contacts know about our opening for a Back-End Web Developer by messaging them on LinkedIn. 
       <br><font class="HL">Earn a $250 referral fee.</font> Use this web-page to easily message the right contacts.
     </p>
-		<span class="welcome"></span>
-		<script type="IN/Login"></script>
+		<span class="welcome"></span>		
+		<script type="IN/Login"> </script>
+   </div>		
+
+
+   <div class="form_details" >
+    <div id = 'inlineBottomSignupArea'>
 		<div class="linkein_txt">
 				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
         We will automatically pre-select your contacts that are most appropriate to send this message to.
         
 		</div>
-      <br>
-   </div>		
-
-
-   <div class="seven columns form_details" >
-    <div id = 'inlineBottomSignupArea' style = 'text-align: center;'>
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
 			<a id="selectall" class="button gray" >Select All</a> 
@@ -392,6 +391,9 @@ function setConnections(connections) {
 
 		<br>	
 		<div class="search hidden"><span>Search : </span><input type="text" name="filterSearchBox" id="filterSearchBox" /></div>
+		<br>
+		<br>
+		<br>
 		
 		<span class="sctr hidden"></span>
 		<div class="_loader hidden"><img src="images/ajax_loader_gray_48.gif?id=n100"></div>
@@ -400,7 +402,9 @@ function setConnections(connections) {
 		<div id="sendMessageForm"></div>
 		<span class="sending hidden"><img src="images/ajax_loader_gray_48.gif?id=n100"></span>
 		<br>
-		<p class="unhide hidden"><a class='sendmsg msgcenter button blue'>Send</a></p>
+		<div id="sendmsg" class="sendmsg hidden">
+			<a class='sendmsg msgcenter blue button'>Send</a>
+		</div>
 		</div>
 		<div id="messages">
 				<div class="status hidden"></div>

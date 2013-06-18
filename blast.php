@@ -17,12 +17,12 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-<link type="text/css" rel="stylesheet" href="css/fcbklistselection.css" />
-<link type="text/css" rel="stylesheet" href="css/custom3.css" />
 <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/keywords.js?id=ffff"></script>
 <script type="text/javascript" src="js/fcbklistselection.js?id=dgggg"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
 	api_key: w1otxvf35or4
@@ -31,7 +31,6 @@
 	credentials_cookie: true
 	onLoad: onLinkedInLoad
 </script>
-<script src="https://www.linkedin.com/uas/js/userspace?v=0.0.2000-RC1.28251-1405&amp;apiKey=w1otxvf35or4&amp;%2F%2F%20%20scope=r_network%2Cw_messages%2Crw_nus%20rw_groups%2Cr_contactinfo%2Cr_emailaddress%2Cr_fullprofile%20r_basicprofile&amp;scope=r_network%2Cw_messages&amp;authorize=false&amp;credentialsCookie=true&amp;onLoad=onLinkedInLoad&amp;"></script>
 <!-- NOTE: be sure to set onLoad: onLinkedInLoad -->
 
 <script type="text/javascript">
@@ -317,7 +316,11 @@ function selectAll(){
 }
 /********************************************************************/
 function setConnections(connections) {
-	var connHTML = "<form action='' method='post'><ul id='fcbklist'>";
+	var connHTML = "<form action='' method='post'>";
+	
+<!--	connHTML = connHTML + "<div id='filters' style='width:559px;'><ul class='selections' id='selections'><li id='view_all' class='view_on rounded'><a onclick='return false;' href='#'>All</a></li><li id='view_selected' class=''><a onclick='return false;' href='#'>Selected (<strong id='view_selected_count'></strong>)</a></li><li id='view_unselected' class='hidden'><a onclick='return false;' href='#'>Unselected</a></li></ul><div class='clearer'></div></div>";-->
+	
+	connHTML = connHTML + "<ul id='fcbklist'>";
 	for (id in connections) {	  
 	    if ( connections[id].hasOwnProperty('location') )
 			connHTML = connHTML + "<li rel='"+connections[id].id+"' search='"+connections[id].location['name']+"' country_code='"+connections[id].location['country'].code+"' class='"+"cs"+ctr+" listitems' >";
@@ -325,9 +328,9 @@ function setConnections(connections) {
 			connHTML = connHTML + "<li rel='"+connections[id].id+"' search='' country_code='' class='"+"cs"+ctr+" listitems' >";		
 		connHTML = connHTML + "<div class='fcbklist_item fs"+ctr+" ifs"+connections[id].id+" '><table border='0' width=\"100%\"><tr>";
 		if (connections[id].hasOwnProperty('pictureUrl')) {
-		  connHTML = connHTML + "<td width='52px' rowspan='2'> <img align=\"baseline\" src=\"" + connections[id].pictureUrl + "\" width=\"55px\" ></td>";
+		  connHTML = connHTML + "<td width='52px'> <img align=\"baseline\" src=\"" + connections[id].pictureUrl + "\" width=\"55px\" ></td>";
 		}  else {
-		  connHTML = connHTML + "<td width='52px' rowspan='2'><img align=\"baseline\" src=\"images/icon_no_photo_80x80.png\" width=\"48px\"></td>";
+		  connHTML = connHTML + "<td width='52px'><img align=\"baseline\" src=\"images/icon_no_photo_80x80.png\" width=\"48px\"></td>";
 		}
 		connHTML = connHTML + "<td height='35px'><span id='names_item' class='name"+connections[id].id+"' >" +connections[id].firstName + " " + connections[id].lastName + "</span></td></tr><tr>";	
 		connHTML = connHTML + "<td><span class='imsg"+connections[id].id+" sgray'></span></td></tr></table></div></li>";		
@@ -357,6 +360,10 @@ function setConnections(connections) {
 <body>
 <?php include("header.html"); ?>
 
+<link type="text/css" rel="stylesheet" href="css/fcbklistselection.css" />
+<link type="text/css" rel="stylesheet" href="css/custom3.css" />
+
+
 <!-- Page Subtitle -->
 	<div id="subtitle">
 		<!-- 960 Container -->
@@ -379,24 +386,26 @@ function setConnections(connections) {
 			</div>
 			
 			<!-- 960 Container -->
-	<div class="container" >	
+	<div class="container blast_message" >	
 		
    <div class="info_message">
+	<div id = 'inlineBottomSignupArea'>
 		<p class="top_message">Let your contacts know about our opening for a Back-End Web Developer by messaging them on LinkedIn. 
       <br><font class="HL">Earn a $250 referral fee.</font> Use this web-page to easily message the right contacts.
     </p>
 		<span class="welcome"></span>		
 		<script type="IN/Login"> </script>
+	</div>
    </div>		
 
 
    <div class="form_details" >
-    <div id = 'inlineBottomSignupArea'>
-		<div class="linkein_txt">
+		<p class="linkein_txt">
 				Clicking on the "Message my LinkedIn contacts" button will allow you to send a personalized message to each of your LinkedIn contacts.<br>
         We will automatically pre-select your contacts that are most appropriate to send this message to.
         
-		</div>
+		</p>
+    <div id = 'inlineBottomSignupArea'>
 		<div id="connectionstest" class="hidden">
 			<!-- <a href="#" onclick="IN.User.logout(); return false;">logout</a>  -->
 			<a id="selectall" class="button gray" >Select All</a> 
